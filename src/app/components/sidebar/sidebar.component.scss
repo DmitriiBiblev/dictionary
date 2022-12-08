@@ -1,0 +1,12 @@
+:host {
+  height: max-content;
+  padding: 2.4rem 4rem;
+  background-color: white;
+  display: grid;
+  gap: 1rem ;
+}
+
+.toggle > div {
+  display: flex;
+  justify-content: space-between;
+}
