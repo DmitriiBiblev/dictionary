@@ -1,2 +1,10 @@
-<app-sidebar></app-sidebar>
-<app-word-list></app-word-list>
+<app-sidebar
+  [(type)]='type'
+  [(length)]='length'
+  [(duplicates)]='duplicates'
+></app-sidebar>
+<app-word-list
+  [type]='type'
+  [length]='length'
+  [duplicates]='duplicates'
+></app-word-list>

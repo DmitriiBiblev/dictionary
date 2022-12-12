@@ -1,0 +1,29 @@
+:host {
+  color: white;
+  background-color: #261740;
+  padding: 4rem 2.4rem 2rem;
+  border-radius: 2.4rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem ;
+  overflow: hidden;
+}
+
+.stroke {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 5rem 1fr 1fr;
+
+  & p {
+    padding: .4rem .8rem;
+    margin: 0;
+  }
+}
+
+.number {
+  text-align: center;
+}
+
+.list {
+  overflow: auto;
+}

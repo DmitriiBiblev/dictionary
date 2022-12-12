@@ -7,5 +7,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  title = 'dictionary';
+  type: string = 'any';
+  length: number | null = null;
+  duplicates: string = 'any'
 }

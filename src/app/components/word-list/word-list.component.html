@@ -1,1 +1,13 @@
-<p>word-list works!</p>
+<div class='stroke'>
+  <p class='number'>№</p>
+  <p>Слово</p>
+  <p>Частота ipm</p>
+</div>
+<div class='list'>
+  <div *ngFor='let item of renderWords(), let i = index' class='stroke'>
+    <p class='number'>{{i + 1}}</p>
+    <p>{{item.word}}</p>
+    <p>{{item.ipm}}</p>
+  </div>
+</div>
+
