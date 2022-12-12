@@ -32,3 +32,15 @@
     <mat-option value='false'>Не повторяются</mat-option>
   </mat-select>
 </mat-form-field>
+<mat-form-field appearance='fill'>
+  <mat-label>Первая буква</mat-label>
+  <mat-select
+    [value]='firstChar'
+    placeholder='Повторение букв в слове'
+    (valueChange)='firstCharChange.emit($event)'
+  >
+    <mat-option value='any'>Не важно</mat-option>
+    <mat-option value='vowel'>Гласная</mat-option>
+    <mat-option value='consonant'>Согласная</mat-option>
+  </mat-select>
+</mat-form-field>

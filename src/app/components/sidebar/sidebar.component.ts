@@ -10,7 +10,9 @@ export class SidebarComponent {
   @Input() type!: string;
   @Input() length!: number | null;
   @Input() duplicates!: string;
+  @Input() firstChar!: string;
   @Output() typeChange: EventEmitter<string> = new EventEmitter<string>();
   @Output() lengthChange: EventEmitter<number | null> = new EventEmitter<number | null>();
   @Output() duplicatesChange: EventEmitter<string> = new EventEmitter<string>();
+  @Output() firstCharChange: EventEmitter<string> = new EventEmitter<string>();
 }

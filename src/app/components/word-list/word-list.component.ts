@@ -16,6 +16,9 @@ export class WordListComponent {
   @Input() type!: string;
   @Input() length!: number | null;
   @Input() duplicates!: string;
+  @Input() firstChar!: string;
+
+  vowels: string = 'аоуэыяеюёи';
 
   renderWords(): IWord[] {
     let words: IWord[] = WORDS;
@@ -23,14 +26,20 @@ export class WordListComponent {
     if (this.type !== 'any') {
       words = words.filter((word: IWord) => word.type === this.type);
     }
-    console.log(this.length);
     if (this.length !== null) {
-      words = words.filter((word: IWord) => {
-        return word.word.length === this.length;
-      });
+      words = words.filter((word: IWord) => word.word.length === this.length);
     }
     if (this.duplicates !== 'any') {
       words = words.filter((word: IWord) => String(word.duplicates) === this.duplicates);
+    }
+    if (this.firstChar !== 'any') {
+      words = words.filter((word: IWord) => {
+        if (this.firstChar === 'vowel') {
+          return this.vowels.indexOf(word.word[0]) > -1;
+        } else {
+          return this.vowels.indexOf(word.word[0]) === -1;
+        }
+      });
     }
 
     return words.sort((word1: IWord, word2: IWord) => {
