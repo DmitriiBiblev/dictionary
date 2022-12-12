@@ -1,0 +1,34 @@
+<mat-form-field appearance='fill'>
+  <mat-label>Часть речи</mat-label>
+  <mat-select
+    [value]='type'
+    placeholder='Выберите часть речи'
+    (valueChange)='typeChange.emit($event)'
+  >
+    <mat-option value='any'>Не важно</mat-option>
+    <mat-option value='noun'>Существительное</mat-option>
+    <mat-option value='verb'>Глагол</mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field appearance='fill'>
+  <mat-label>Количество букв</mat-label>
+  <input
+    matInput
+    type='number'
+    placeholder='Введите количество букв'
+    [ngModel]='length'
+    (ngModelChange)='lengthChange.emit($event)'
+  >
+</mat-form-field>
+<mat-form-field appearance='fill'>
+  <mat-label>Повторение букв</mat-label>
+  <mat-select
+    [value]='duplicates'
+    placeholder='Повторение букв в слове'
+    (valueChange)='duplicatesChange.emit($event)'
+  >
+    <mat-option value='any'>Не важно</mat-option>
+    <mat-option value='true'>Повторяются</mat-option>
+    <mat-option value='false'>Не повторяются</mat-option>
+  </mat-select>
+</mat-form-field>
