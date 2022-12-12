@@ -9,5 +9,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 export class AppComponent {
   type: string = 'any';
   length: number | null = null;
-  duplicates: string = 'any'
+  duplicates: string = 'any';
+  firstChar: string = 'any';
 }
